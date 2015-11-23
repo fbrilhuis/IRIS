@@ -18,14 +18,14 @@ NB Java JDK 1.8 will not work
 * Install Java JDK 1.7 (or JDK 1.6 by skipping some integration test modules) (http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 * Install Maven 3.0.5 (http://archive.apache.org/dist/maven/maven-3/3.0.5/binaries/)
 * Configure settings.xml in your maven/conf folder to add the following maven repository
-  *Add: 
+  *Add in the profile section: 
     <profile>
-      <id>Your Profile Name</id>
+      <id>Any Profile Name</id>
 
       <repositories>
         <repository>
-          <id>Your Repo Name</id>
-          <name>Your Repo Name</name>
+          <id>Any Repo ID Name</id>
+          <name>Any Repo Name</name>
           <url>**SEE BELOW**</url>
           <layout>default</layout>
         </repository>
@@ -44,6 +44,7 @@ NB Java JDK 1.8 will not work
 * Open a command prompt
  * To check if the previous steps have gone correct type: **java -version** (it should say java version 1.7) and **mvn -version** (it should say maven version 3.0.5)
  * Go to your cloned repository
+ * Type: **SET MAVEN_OPTS=-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m**
  * Type: **mvn clean install**
 
 ## Build commands:
